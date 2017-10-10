@@ -11,9 +11,13 @@ namespace DataTransfer_ContextHandler
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           Page lastPage= (Page)Context.Handler;
-            lblName.Text=((TextBox)lastPage.FindControl("txtName")).Text;
-            lblEmail.Text = ((TextBox)lastPage.FindControl("txtEmail")).Text;
-        }
+            if (!IsPostBack)
+            {
+                Page lastPage = (Page)Context.Handler;
+                lblName.Text = ((TextBox)lastPage.FindControl("txtName")).Text;
+
+                lblEmail.Text = ((TextBox)lastPage.FindControl("txtEmail")).Text;
+            }
+            }
     }
 }

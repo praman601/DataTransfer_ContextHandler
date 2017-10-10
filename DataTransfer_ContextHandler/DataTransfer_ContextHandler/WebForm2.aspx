@@ -35,7 +35,7 @@
                 </tr>
                                         <tr>
                                             <td colspan="2">
-                                                <asp:Label ID="lblStatus" runat="server"></asp:Label>
+                                                <asp:Button ID="Button1" runat="server" Text="Button" />
                                             </td>
                                         </tr>
                 </table>
